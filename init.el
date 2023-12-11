@@ -1,4 +1,27 @@
-;; My Emacs config 
+;;; init.el --- Emacs configuration file.
+;;
+;;
+;;; Commentary:
+;;
+;; Requires Emacs 28 or higher.
+;;
+;; Currently running Emacs on:
+;; OpenSUSE Tumbleweed on Asus Zenbook
+;;
+;; Making changes / testing:
+;;
+;; - Use consult line on C-s instead of I-search
+;; - Not sure if I want embark or not
+;;
+;; TODO:
+;;
+;; - [x] Better theme
+;; - [ ] Remove mpc?
+;; - [ ] Next todo
+
+;;; Code:
+
+;; My Emacs config
 
 ;; Add package archives I want
 (require 'package)
@@ -36,7 +59,7 @@
 ;; Display line numbers in every buffer
 (global-display-line-numbers-mode 1)
 
-;;Install & load theme 
+;;Install & load theme
 (use-package gruvbox-theme
   :config
   (load-theme 'gruvbox-dark-medium t)
