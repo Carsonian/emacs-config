@@ -1,0 +1,6 @@
+# Ignore all files except the ones listed below.
+# I only want to have my init.el in git
+*
+
+!.gitignore
+!init.el
