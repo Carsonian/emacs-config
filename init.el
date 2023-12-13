@@ -121,6 +121,10 @@
 
 (use-package magit)
 
+(use-package windsize
+  :config
+  (windsize-default-keybindings))
+
 (use-package flycheck
   :init
   (add-hook 'after-init-hook #'global-flycheck-mode))
@@ -175,6 +179,8 @@
   (setq dashboard-set-heading-icons t)
   (setq dashboard-set-file-icons t)
   (setq dashboard-set-init-info t)
+  ;; Make it open dashboard in client mode too
+  (setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
   )
 
 (use-package projectile
@@ -292,4 +298,5 @@ Go to indentation otherwise"
              ((at-or-after-indentation-p) (move-end-of-line nil))
              (t (back-to-indentation))))
 (global-set-key (kbd "C-e") #'move-end-of-line-or-indentation)
+
 
